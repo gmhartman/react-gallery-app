@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SearchForm = (props) => {
+    //sets the search state  to empty
     const [searchText, setSearchText] = useState('');
     let navigate = useNavigate();
-
+    //searches text and changes URL path upon search submit
     const handleSubmit = e => {
         e.preventDefault();
         props.onSearch(searchText);

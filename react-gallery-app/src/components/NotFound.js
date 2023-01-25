@@ -1,5 +1,6 @@
 import React from 'react';
 
+//displays if no results are found in the search function
 const NotFound = (props) => {
     return (
         <div className='not-found'>

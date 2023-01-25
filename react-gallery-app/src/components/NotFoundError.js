@@ -1,5 +1,6 @@
 import React from 'react';
 
+//displays if URL path does not exist
 const NotFoundError = (props) => {
     return (
         <div className='not-found'>

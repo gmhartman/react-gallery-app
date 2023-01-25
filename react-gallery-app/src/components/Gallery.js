@@ -1,14 +1,12 @@
 import React from 'react';
 import NotFound from './NotFound';
-// import { useParams } from 'react-router-dom';
-// import {Route, Routes, Navigate} from 'react-router-dom';
 import Photo from './Photo';
-// import NotFound from './NotFound';
 
 const Gallery = (props) => {
     const photoData = props.data;
     let photoResults
 
+    //conditional that displays photo grid if results exist
     if (photoData.length > 0) {
      photoResults = photoData.map(photo => (
         <Photo 
@@ -20,22 +18,10 @@ const Gallery = (props) => {
             />
     ))
     } else {
+        //if not results, NotFound component is called
         photoResults = <NotFound />
     };
 
-    // const {topic} = useParams();
-    // let searchTopic = topic ? topic : defaultSearch;
-    // searchTopic = searchTopic ? searchTopic : "cats%2Cdogs%2Ccomputers";
-
-    // useEffect(() => {
-    //     getPhotos(searchTopic)
-    // }, [searchTopic]);
-    // photos = photos.map(photo => {
-    //     return <Photo
-    //         url={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
-    //         key={photo.id}
-    //     />
-    // })
     return (
         <div className='photo-container'>
             <h1>Gallery</h1>

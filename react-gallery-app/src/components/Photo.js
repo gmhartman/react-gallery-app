@@ -1,5 +1,6 @@
 import React from 'react';
 
+//uses flickr API via props to display photo
 const Photo = (props) => {
     return (
     <li>

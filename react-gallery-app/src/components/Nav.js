@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+//nav links to easily display certain categories
 const Nav = () => {
-
 
     return (
         <nav className='main-nav'>
